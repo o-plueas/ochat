@@ -1,12 +1,9 @@
-Here’s a clean GitHub-ready README without icons:
 
----
 
    Flask GPT Chat App (OpenRouter + Gemini)
 
 A simple Flask web application that connects to the OpenRouter API and uses the Gemini Flash model to generate short AI responses. The app accepts user input via JSON and returns AI-generated replies.
 
----
 
   Features
 
@@ -17,29 +14,18 @@ A simple Flask web application that connects to the OpenRouter API and uses the 
   Fast and concise AI responses
   Environment variable support with `.env`
 
----
+
 
   Project Structure
 
-   
-project/
-│── app.py
-│── .env
-│── templates/
-│   └── home.html
-│── README.md
-   
-
----
 
   Installation
 
     1. Clone the repository
 
-   bash
-git clone https://github.com/yourusername/flask-gpt-app.git
-cd flask-gpt-app
    
+git clone git remote add origin https://github.com/o-plueas/ochat.git
+
 
     2. Create a virtual environment
 
@@ -54,7 +40,7 @@ source venv/bin/activate      On Windows: venv\Scripts\activate
 pip install flask openai python-dotenv
    
 
----
+    
 
   Environment Variables
 
@@ -64,7 +50,7 @@ Create a `.env` file in the root directory:
 OPENROUTER_API_KEY=your_api_key_here
    
 
----
+    
 
   Running the App
 
@@ -78,7 +64,7 @@ The app will start at:
 http://127.0.0.1:5000/
    
 
----
+    
 
   API Usage
 
@@ -112,7 +98,7 @@ POST /gpt/
 }
    
 
----
+    
 
   Code Overview
 
@@ -121,7 +107,7 @@ POST /gpt/
   `/` route serves the frontend (`home.html`)
   `/gpt/` route processes AI requests
 
----
+    
 
   Configuration
 
@@ -145,7 +131,7 @@ max_tokens=100
 "You are a helpful assistant. Keep answers short."
    
 
----
+    
 
   Example cURL Request
 
@@ -155,14 +141,14 @@ curl -X POST http://127.0.0.1:5000/gpt/ \
 -d '{"message": "Tell me a joke"}'
    
 
----
+    
 
   Notes
 
   Ensure your API key is valid and has access to OpenRouter models
   The app runs in debug mode by default (not recommended for production)
 
----
+    
 
   Production Tips
 
@@ -170,12 +156,12 @@ curl -X POST http://127.0.0.1:5000/gpt/ \
   Use a production server like `gunicorn`
   Add request validation and rate limiting
 
----
+    
 
  License
 
 This project is open-source and available under the MIT License.
 
----
+    
 
 If you want, I can also create a minimal frontend (`home.html`) or help you deploy it.
