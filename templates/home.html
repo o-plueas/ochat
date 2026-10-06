@@ -163,7 +163,7 @@
     <aside class="sidebar" id="sidebar">
         <div class="logo">
             <div class="logo-icon">✦</div>
-            <span class="logo-text">Nova AI</span>
+            <span class="logo-text">OChat AI</span>
         </div>
 
         <button class="new-chat-btn" onclick="newChat()">＋ New Chat</button>
@@ -192,7 +192,7 @@
                         <line x1="3" y1="18" x2="21" y2="18"/>
                     </svg>
                 </button>
-                <span class="topbar-title" id="topbarTitle">Nova AI Assistant</span>
+                <span class="topbar-title" id="topbarTitle">OChat AI Assistant</span>
             </div>
             <div class="model-badge"><span class="model-dot"></span>Gemini Flash</div>
         </div>
@@ -206,7 +206,7 @@
                     <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
                 </button>
             </div>
-            <div class="input-hint">Nova AI can make mistakes. Verify important info.</div>
+            <div class="input-hint">OChat AI can make mistakes. Verify important info.</div>
         </div>
     </div>
 </div>
@@ -228,12 +228,12 @@
 
     // ── Storage ──
     function saveToStorage() {
-        try { localStorage.setItem("nova_chats", JSON.stringify(chats)); } catch(e) {}
+        try { localStorage.setItem("OChat_chats", JSON.stringify(chats)); } catch(e) {}
     }
 
     function loadFromStorage() {
         try {
-            const raw = localStorage.getItem("nova_chats");
+            const raw = localStorage.getItem("OChat_chats");
             if (raw) chats = JSON.parse(raw);
         } catch(e) { chats = {}; }
     }
@@ -295,7 +295,7 @@
     function renderMessages() {
         chatEl.innerHTML = "";
         const current = chats[activeChatId];
-        titleEl.textContent = current ? current.title : "Nova AI Assistant";
+        titleEl.textContent = current ? current.title : "OChat AI Assistant";
 
         if (!current || current.messages.length === 0) {
             showWelcome();
